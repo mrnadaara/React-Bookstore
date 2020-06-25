@@ -1,4 +1,4 @@
-import { CREATE_BOOK, REMOVE_BOOK } from '../actions/types'
+import { CREATE_BOOK, REMOVE_BOOK } from '../actions/types';
 
 const booksReducer = (state = [], action) => {
   switch (action.type) {
@@ -11,4 +11,4 @@ const booksReducer = (state = [], action) => {
   }
 }
 
-export default booksReducer
+export default booksReducer;

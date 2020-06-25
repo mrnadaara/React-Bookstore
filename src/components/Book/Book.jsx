@@ -1,18 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const Book = ({ book }) => (
-  <tr>{ book }</tr>
-)
+  <tr>
+    <td>{ book.id }</td>
+    <td>{ book.title }</td>
+    <td>{ book.category }</td>
+  </tr>
+);
 
 Book.propTypes = {
-  book: PropTypes.objectOf(PropTypes.string)
-}
+  book: PropTypes.objectOf(PropTypes.string),
+};
 
 Book.defaultProps = {
-  book: {
+  book: {},
+};
 
-  }
-}
-
-export default Book
+export default Book;

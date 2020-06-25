@@ -1,3 +1,3 @@
-export const CREATE_BOOK = 'CREATE BOOK';
+export const CREATE_BOOK = 'create_book';
 
-export const REMOVE_BOOK = 'REMOVE BOOK';
+export const REMOVE_BOOK = 'remove_book';
