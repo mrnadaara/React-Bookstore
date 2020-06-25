@@ -1,9 +1,12 @@
 import React from 'react';
+import BooksForm from './BooksForm/BooksForm';
+import BooksList from './BooksList/BooksList';
 
 function App() {
   return (
     <div>
-      welcome to our bookstore
+      <BooksList />
+      <BooksForm />
     </div>
   );
 }
