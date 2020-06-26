@@ -57,7 +57,7 @@ Project was deployed to Heroku using [create-react-app-buildpack](https://github
 👤 **Leonard Rwai Kanyesigye**
 
 - Github: [@rmauritsson](https://github.com/rmauritsson)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- Twitter: [@leokanye](https://twitter.com/leokanye)
 - Linkedin: [Leonard Rwai Kanyesigye](https://www.linkedin.com/in/leonard-rwai-kanyesigye/)
 
 ## 🤝 Contributing
