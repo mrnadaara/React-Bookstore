@@ -1,11 +1,12 @@
 import React from 'react';
+import BooksForm from '../../containers/BooksForm/BooksForm';
+import BooksList from '../../containers/BooksList/BooksList';
 
-function App() {
-  return (
-    <div>
-      welcome to our bookstore
-    </div>
-  );
-}
+const App = () => (
+  <div>
+    <BooksForm />
+    <BooksList />
+  </div>
+);
 
 export default App;
