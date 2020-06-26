@@ -40,7 +40,7 @@ class BooksForm extends React.Component {
               <option key={category}>{ category }</option>
             ))}
           </select>
-          <button type="submit">Save</button>
+          <button type="submit">Add</button>
         </form>
       </div>
     );
