@@ -19,7 +19,7 @@ const BooksList = ({ books, handleRemoveBook }) => (
       <tbody>
         {
           books.map(book => (
-            <Book key={book.id} book={book} onClick={() => handleRemoveBook(book)} />
+            <Book key={book.id} book={book} handleRemoveBook={() => handleRemoveBook(book)} />
           ))
         }
       </tbody>
@@ -28,11 +28,7 @@ const BooksList = ({ books, handleRemoveBook }) => (
 );
 
 BooksList.propTypes = {
-  books: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number,
-    title: PropTypes.string,
-    category: PropTypes.string,
-  })),
+  books: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
   handleRemoveBook: PropTypes.func,
 };
 

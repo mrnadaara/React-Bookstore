@@ -15,10 +15,14 @@ class BooksForm extends React.Component {
   }
 
   handleSubmit = event => {
-    const { onClick } = this.props;
+    const { createBook } = this.props;
     const { title, category } = this.state;
     event.preventDefault();
-    onClick({ title, category });
+    createBook({ title, category });
+    this.setState({
+      title: '',
+      category: 'Action',
+    });
   };
 
   handleChange = event => {
@@ -48,15 +52,11 @@ class BooksForm extends React.Component {
 }
 
 BooksForm.propTypes = {
-  onClick: PropTypes.func,
-};
-
-BooksForm.defaultProps = {
-  onClick: () => {},
+  createBook: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  onClick: createBook,
+  createBook,
 }, dispatch);
 
 export default connect(null, mapDispatchToProps)(BooksForm);

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { v4 as uuid } from 'uuid';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import './assets/index.css';
@@ -7,26 +8,22 @@ import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
 import rootReducers from './reducers';
 
-const getRandomInt = () => {
-  const min = Math.ceil(0);
-  const max = Math.floor(100);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+const getRandomId = () => uuid();
 
 const state = {
   books: [
     {
-      id: getRandomInt(),
+      id: getRandomId(),
       title: 'To Kill a Mocking Bird',
       category: 'History',
     },
     {
-      id: getRandomInt(),
+      id: getRandomId(),
       title: 'Rich Dad, Poor Dad',
       category: 'Learning',
     },
     {
-      id: getRandomInt(),
+      id: getRandomId(),
       title: 'Hunger Games',
       category: 'Action',
     },
