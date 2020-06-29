@@ -1,16 +1,13 @@
+import { v4 as uuid } from 'uuid';
 import { CREATE_BOOK, REMOVE_BOOK } from './types';
 
-const getRandomInt = () => {
-  const min = Math.ceil(0);
-  const max = Math.floor(100);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+const getRandomId = () => uuid();
 
 export const createBook = book => ({
   type: CREATE_BOOK,
   payload: {
     ...book,
-    id: getRandomInt(),
+    id: getRandomId(),
   },
 });
 
