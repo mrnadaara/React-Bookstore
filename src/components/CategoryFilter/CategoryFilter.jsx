@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class CategoryFilter extends React.Component {
   constructor(props) {
@@ -8,10 +9,15 @@ class CategoryFilter extends React.Component {
     };
   }
 
+  handleFilterChange = event => {
+    const { handleFilterChange } = this.props;
+    handleFilterChange(event.target.value);
+  }
+
   render() {
     const { category } = this.state;
     return (
-      <select name="category" onChange={this.handleChange} value={category}>
+      <select name="category" onChange={this.handleFilterChange}>
         {category.map(category => (
           <option key={category}>{ category }</option>
         ))}
@@ -19,5 +25,9 @@ class CategoryFilter extends React.Component {
     );
   }
 }
+
+CategoryFilter.propTypes = {
+  handleFilterChange: PropTypes.func.isRequired,
+};
 
 export default CategoryFilter;
