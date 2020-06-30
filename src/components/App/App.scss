@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+.app-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+
+  .books-list-overflow {
+    overflow-y: scroll;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .books-form-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+}

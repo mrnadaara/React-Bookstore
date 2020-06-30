@@ -4,6 +4,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { createBook } from '../../actions';
 
+import './BooksForm.scss';
+
 class BooksForm extends React.Component {
   constructor(props) {
     super(props);
@@ -36,7 +38,8 @@ class BooksForm extends React.Component {
     const { title, category } = this.state;
     const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
     return (
-      <div>
+      <div className="form-container">
+        <h2>Add new book</h2>
         <form onSubmit={this.handleSubmit}>
           <input onChange={this.handleChange} name="title" placeholder="Type in a book" value={title} />
           <select name="category" onChange={this.handleChange} value={category}>
