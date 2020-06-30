@@ -11,8 +11,6 @@ Magic-books Inc. is a fictional company based in Germany. They have requested ou
 - JavaScript
 - React.Js
 - Redux
-- React Router
-- Bootstrap
 
 ## Live Demo
 
