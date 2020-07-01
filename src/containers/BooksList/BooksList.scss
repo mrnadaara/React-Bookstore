@@ -3,6 +3,7 @@
 
   table {
     width: 100%;
+    border-spacing: 0 20px;
   }
 
   select {
@@ -23,5 +24,12 @@
     font-style: normal;
     line-height: normal;
     letter-spacing: -0.15px;
+    padding: 0 15px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    button {
+      font-size: 10px;
+    }
   }
 }

@@ -20,11 +20,13 @@ class BooksForm extends React.Component {
     const { createBook } = this.props;
     const { title, category } = this.state;
     event.preventDefault();
-    createBook({ title, category });
-    this.setState({
-      title: '',
-      category: 'Action',
-    });
+    if (title !== '') {
+      createBook({ title, category });
+      this.setState({
+        title: '',
+        category: 'Action',
+      });
+    }
   };
 
   handleChange = event => {

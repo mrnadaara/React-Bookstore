@@ -7,4 +7,10 @@
     text-align: center;
     margin-top: 15px;
   }
+
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 20px;
+    }
+  }
 }
