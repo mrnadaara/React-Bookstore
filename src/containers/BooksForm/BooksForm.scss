@@ -1,0 +1,80 @@
+.form-container {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  h2 {
+    width: 174px;
+    height: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.18px;
+    color: #888;
+  }
+
+  select,
+  option,
+  input {
+    height: 45px;
+    border-radius: 4px;
+    border: solid 1px #e8e8e8;
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.15px;
+    padding: 0 15px;
+  }
+
+  form {
+    display: flex;
+    justify-content: space-around;
+
+    input {
+      width: 70%;
+    }
+
+    select {
+      width: 15%;
+    }
+
+    button {
+      width: 10%;
+      height: 45px;
+      border-radius: 3px;
+      border: none;
+      background-color: #0290ff;
+      font-family: 'Roboto Slab', serif;
+      font-size: 13px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.5px;
+      text-align: center;
+      color: #fff;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    form {
+      flex-flow: wrap;
+      justify-content: flex-start;
+
+      input,
+      select,
+      button {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -6,15 +6,17 @@ import Book from '../../components/Book/Book';
 import CategoryFilter from '../../components/CategoryFilter/CategoryFilter';
 import { removeBook, changeFilter } from '../../actions';
 
+import './BooksList.scss';
+
 class BooksList extends React.Component {
   checkFilter = () => {
     const { filter, books, handleRemoveBook } = this.props;
     if (filter === 'All') {
-      return books.map(book => (
+      return books.reverse().map(book => (
         <Book key={book.id} book={book} handleRemoveBook={() => handleRemoveBook(book)} />
       ));
     }
-    return books.filter(book => book.category === filter).map(book => (
+    return books.reverse().filter(book => book.category === filter).map(book => (
       <Book key={book.id} book={book} handleRemoveBook={() => handleRemoveBook(book)} />
     ));
   };
@@ -22,17 +24,9 @@ class BooksList extends React.Component {
   render() {
     const { handleFilterChange } = this.props;
     return (
-      <div>
+      <div className="books-list-container">
         <CategoryFilter handleFilterChange={handleFilterChange} />
         <table>
-          <thead>
-            <tr>
-              <th>Book ID</th>
-              <th>Title</th>
-              <th>Category</th>
-              <th>Action</th>
-            </tr>
-          </thead>
           <tbody>
             {
               this.checkFilter()

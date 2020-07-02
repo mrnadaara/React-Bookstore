@@ -2,7 +2,7 @@
 
 > A simple online library of books built with React.Js
 
-![screenshot](./app_screenshot.png)
+![screenshot](./app_screenshot.PNG)
 
 Magic-books Inc. is a fictional company based in Germany. They have requested our help to build the front-end of an application that will help them organize and manage their bookstore. They want it to be fast, dynamic and responsive to their actions and therefore we've decided to build it with React & Redux.
 
@@ -11,12 +11,10 @@ Magic-books Inc. is a fictional company based in Germany. They have requested ou
 - JavaScript
 - React.Js
 - Redux
-- React Router
-- Bootstrap
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://leoandahmedbookstore.herokuapp.com/)
 
 
 ## Getting Started
@@ -37,10 +35,6 @@ To get a local copy up and running follow these simple example steps.
 ### Usage
 
 Start development server ``` yarn start ```
-
-### Run tests
-
-You can test by running ``` yarn test ```
 
 ### Deployment
 

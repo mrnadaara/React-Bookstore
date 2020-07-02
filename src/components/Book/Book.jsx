@@ -1,12 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './Book.scss';
+
 const Book = ({ book, handleRemoveBook }) => (
   <tr>
-    <td>{ book.id }</td>
-    <td>{ book.title }</td>
-    <td>{ book.category }</td>
-    <td><button type="button" onClick={handleRemoveBook}>Delete</button></td>
+    <td>
+      <div className="book-container">
+        <div>
+          <h3>{ book.category }</h3>
+          <h1>{ book.title }</h1>
+        </div>
+        <div className="button-container">
+          <button type="button" onClick={handleRemoveBook}>Delete</button>
+        </div>
+      </div>
+    </td>
   </tr>
 );
 

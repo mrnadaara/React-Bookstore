@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './CategoryFilter.scss';
+
 class CategoryFilter extends React.Component {
   constructor(props) {
     super(props);
@@ -17,11 +19,14 @@ class CategoryFilter extends React.Component {
   render() {
     const { category } = this.state;
     return (
-      <select name="category" onChange={this.handleFilterChange}>
-        {category.map(category => (
-          <option key={category}>{ category }</option>
-        ))}
-      </select>
+      <div className="filter-container">
+        <h1>Filter</h1>
+        <select name="category" onChange={this.handleFilterChange}>
+          {category.map(category => (
+            <option key={category}>{ category }</option>
+          ))}
+        </select>
+      </div>
     );
   }
 }

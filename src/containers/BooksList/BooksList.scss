@@ -1,0 +1,35 @@
+.books-list-container {
+  width: 80%;
+
+  table {
+    width: 100%;
+    border-spacing: 0 20px;
+  }
+
+  select {
+    margin-left: 20px;
+  }
+
+  select,
+  option {
+    width: 285px;
+    height: 40px;
+    border-radius: 4px;
+    border: solid 1px #e8e8e8;
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.15px;
+    padding: 0 15px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    button {
+      font-size: 10px;
+    }
+  }
+}
